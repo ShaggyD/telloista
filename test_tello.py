@@ -10,8 +10,7 @@ tellopy sample using joystick and video palyer
 import time
 import sys
 import tellopy
-import pygame
-import pygame.locals
+
 from subprocess import Popen, PIPE
 
 
@@ -91,10 +90,11 @@ def main():
         while 1:
             # loop with pygame.event.get() is too much tight w/o some sleep
             time.sleep(0.01)
+            raise
 
             # Define a Deadzone
             # if -buttons.DEADZONE <= e.value and e.value <= buttons.DEADZONE:
-                 e.value = 0.0
+            #     e.value = 0.0
 
             if e.axis == buttons.LEFT_Y:
                 throttle = update(
